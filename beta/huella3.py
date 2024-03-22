@@ -174,7 +174,7 @@ class MainWindow2:
         # self.root.geometry(f"{screen_width}x{screen_height}")
         self.root.geometry("700x400")
 
-        url = f"http://172.206.234.125:3500/general/estudiantes/consultar-datos-dni-por-proceso/{dni}/{27}"
+        url = f"http://143.198.105.92:3500/general/estudiantes/consultar-datos-dni-por-proceso/{dni}/{27}"
         try:
             response = requests.get(url)
             if response.status_code == 200:
@@ -193,7 +193,7 @@ class MainWindow2:
                 
                 
                 
-                url = f"http://172.206.234.125:3500/{datos_estudiante[0]['DNI']}/{datos_estudiante[0]['DNI']}.jpeg"
+                url = f"http://143.198.105.92:3500/{datos_estudiante[0]['DNI']}/{datos_estudiante[0]['DNI']}.jpeg"
                 response = requests.get(url)
                 image_data = response.content
                 
